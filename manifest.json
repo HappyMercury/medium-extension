@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Medium to Freedium Redirect",
+    "version": "1.0",
+    "description": "Automatically redirect Medium articles to Freedium.",
+    "permissions": ["declarativeNetRequest"],
+    "host_permissions": ["*://medium.com/*", "*://*.medium.com/*"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "declarative_net_request": {
+      "rule_resources": [
+        {
+          "id": "ruleset_1",
+          "enabled": true,
+          "path": "rules.json"
+        }
+      ]
+    }
+  }
+  
